@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "11337:80"
+    volumes:
+      - "./src:/var/www/html"
+  db:
+    image: mysql:latest
+    restart: always
+    volumes: 
+      - "./db/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql"
+      - "./db/mysql-custom-config.cnf:/etc/mysql/my.cnf"
+      - "./db/flag.txt:/flag"
+    environment:
+      MYSQL_ROOT_PASSWORD: AnyPasswordThatYouWant
