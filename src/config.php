@@ -2,5 +2,5 @@
 
 $servername = "db";
 $username = "root";
-$password = "AnyPasswordThatYouWant";
+$password = "123456";
 $dbname = "Task";

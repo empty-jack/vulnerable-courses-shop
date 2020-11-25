@@ -15,4 +15,4 @@ services:
       - "./db/mysql-custom-config.cnf:/etc/mysql/my.cnf"
       - "./db/flag.txt:/flag"
     environment:
-      MYSQL_ROOT_PASSWORD: AnyPasswordThatYouWant
+      MYSQL_ROOT_PASSWORD: 123456
